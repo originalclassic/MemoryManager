@@ -1,0 +1,21 @@
+# ninja log v6
+16	185	7444567793050509	CMakeFiles/MemoryManager.dir/src/Allocator.cpp.obj	4e17a126c9103a34
+2	293	7444568904720389	build.ninja	12b92a364ac66500
+431	633	7444567799083866	libMemoryManager.dll	5438a6a4ce1aa7d8
+8	395	7444567792965479	CMakeFiles/MemoryManager.dir/src/MemoryManager.cpp.obj	b5c4b2dd77b390aa
+523	699	7444561485768228	TestMemoryManager.exe	9add7d1e070ade27
+23	431	7444567793120512	CMakeFiles/MemoryManager.dir/src/PoolAllocator.cpp.obj	a5b669eaa9c7fc26
+431	633	7444567799083866	libMemoryManager.dll.a	5438a6a4ce1aa7d8
+7	521	7444561480608201	CMakeFiles/TestMemoryManager.dir/Test/main.cpp.obj	2e1e791169c73a63
+46	599	7444567793345553	CMakeFiles/TestMemoryManager.dir/Test/Actor.cpp.obj	ca78ae4177b1a460
+39	724	7444567793275551	CMakeFiles/TestMemoryManager.dir/Test/Level.cpp.obj	ea0fb851e4bfb8f9
+16	541	7444570579348596	CMakeFiles/TestMemoryManager.dir/Test/Actor.cpp.obj	ca78ae4177b1a460
+21	511	7444571772191144	CMakeFiles/TestMemoryManager.dir/Test/Actor.cpp.obj	ca78ae4177b1a460
+14	631	7444571772121132	CMakeFiles/TestMemoryManager.dir/Test/Level.cpp.obj	ea0fb851e4bfb8f9
+7	761	7444571772046125	CMakeFiles/TestMemoryManager.dir/Test/Main.cpp.obj	515791b9d17c2bf6
+761	954	7444571779588963	TestMemoryManager.exe	71f967f0a8690640
+21	816	7444573413871701	CMakeFiles/TestMemoryManager.dir/Test/Level.cpp.obj	ea0fb851e4bfb8f9
+10	936	7444573413761689	CMakeFiles/TestMemoryManager.dir/Test/Main.cpp.obj	515791b9d17c2bf6
+936	1118	7444573423023906	TestMemoryManager.exe	71f967f0a8690640
+8	728	7444574659677114	CMakeFiles/TestMemoryManager.dir/Test/Main.cpp.obj	515791b9d17c2bf6
+729	878	7444574666888787	TestMemoryManager.exe	71f967f0a8690640

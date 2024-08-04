@@ -1,0 +1,4 @@
+C:/Users/Damien/CLionProjects/MemoryManager/build/CMakeFiles/MemoryManager.dir
+C:/Users/Damien/CLionProjects/MemoryManager/build/CMakeFiles/TestMemoryManager.dir
+C:/Users/Damien/CLionProjects/MemoryManager/build/CMakeFiles/edit_cache.dir
+C:/Users/Damien/CLionProjects/MemoryManager/build/CMakeFiles/rebuild_cache.dir
