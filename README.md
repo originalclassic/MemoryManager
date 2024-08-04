@@ -1,112 +1,139 @@
-Memory Manager
-Overview
-The MemoryManager is a custom memory management system designed to provide efficient memory allocation and deallocation for applications. This system allows you to manage memory dynamically with greater control, using custom strategies for allocation and deallocation.
+# Memory Manager
 
-Features
-Custom Allocation: Manages memory allocation and deallocation through a custom strategy.
-Deallocation Tracking: Ensures that memory is properly deallocated and reused.
-Memory Pools: Supports the use of memory pools for efficient allocation and deallocation.
-Getting Started
-Installation
-Clone the Repository
+## Overview
 
-bash
-Code kopieren
-git clone <repository-url>
-cd <repository-directory>
-Build the Project
+The `MemoryManager` is a custom memory management system designed for efficient dynamic memory allocation and deallocation. This system offers control over memory management with custom allocation and deallocation strategies, making it suitable for various applications.
 
-Follow the instructions for building the project. This typically involves using a build system such as make, cmake, or another build tool specific to your environment.
+## Features
 
-bash
-Code kopieren
-mkdir build
-cd build
-cmake ..
-make
-Usage
-Include the Header
+- **Custom Allocation**: Manage memory allocation and deallocation with a custom strategy.
+- **Deallocation Tracking**: Ensures proper memory reuse and management.
+- **Memory Pools**: Supports memory pooling for efficient allocation.
 
-Include the MemoryManager.h header file in your project.
+## Getting Started
 
-cpp
-Code kopieren
-#include "MemoryManager.h"
-Create an Instance of MemoryManager
+### Installation
 
-Instantiate the MemoryManager object in your application.
+1. **Clone the Repository**
 
-cpp
-Code kopieren
-MemoryManager memoryManager;
-Allocate Memory
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
 
-Use the allocate method to request memory.
 
-cpp
-Code kopieren
-void* ptr = memoryManager.allocate(sizeof(int));
-Deallocate Memory
 
-Use the deallocate method to return memory to the manager.
+2. **Build the Project**
 
-cpp
-Code kopieren
-memoryManager.deallocate(ptr);
-Handle Errors
+   ```bash
+    mkdir build
+    cd build
+    cmake ..
+    make
 
-Ensure to check for null pointers or handle any potential errors related to memory allocation.
 
-Example
-Here is a simple example of using the MemoryManager:
 
-cpp
-Code kopieren
+### Usage
+1. **Include the Header**
+
+Include MemoryManager.h in your project files:
+
+	```cpp
+    #include "MemoryManager.h"
+
+
+2. **Create an Instance**
+
+Instantiate the MemoryManager object:
+
+
+	```cpp
+    MemoryManager memoryManager;
+
+
+3. **Allocate Memory**
+
+Request memory allocation:
+
+	```cpp
+    void* ptr = memoryManager.allocate(sizeof(int));
+
+
+4. **Deallocate Memory**
+
+Return memory to the manager:
+
+	```cpp
+    memoryManager.deallocate(ptr);
+
+
+5. **Handle Errors**
+
+Check for null pointers or errors during allocation:
+
+```cpp
+if (ptr == nullptr) {
+std::cerr << "Memory allocation failed!" << std::endl;
+}
+```
+
+
+	
+### Example
+
+Here’s a simple usage example:
+
+
+```cpp
 #include "MemoryManager.h"
 #include <iostream>
 
 int main() {
-    MemoryManager memoryManager;
+MemoryManager memoryManager;
 
-    // Allocate memory
-    int* num = static_cast<int*>(memoryManager.allocate(sizeof(int)));
-    if (num == nullptr) {
-        std::cerr << "Memory allocation failed!" << std::endl;
-        return 1;
-    }
-
-    // Use the allocated memory
-    *num = 42;
-    std::cout << "Number: " << *num << std::endl;
-
-    // Deallocate memory
-    memoryManager.deallocate(num);
-
-    return 0;
+// Allocate memory
+int* num = static_cast<int*>(memoryManager.allocate(sizeof(int)));
+if (num == nullptr) {
+	std::cerr << "Memory allocation failed!" << std::endl;
+return 1;
 }
-Implementation Details
-MemoryManager.h
-Contains the declaration of the MemoryManager class, including methods for allocation and deallocation.
 
-MemoryManager.cpp
-Contains the implementation of the MemoryManager methods, including the logic for allocating and deallocating memory.
+// Use allocated memory
+*num = 42;
+std::cout << "Number: " << *num << std::endl;
 
-Design Considerations
-Custom Allocation Strategy: You may choose to implement custom allocation strategies, such as memory pools or reference counting.
-Thread Safety: Ensure thread safety if the MemoryManager will be used in multi-threaded applications.
-Extending the Memory Manager
-To extend or modify the MemoryManager, follow these guidelines:
+// Deallocate memory
+memoryManager.deallocate(num);
 
-Add New Allocation Strategies: Implement new allocation strategies in the MemoryManager.cpp file.
-Optimize Performance: Profile and optimize the memory management code as needed.
-Handle Special Cases: Implement additional logic to handle special memory management scenarios.
-Contributing
-Contributions to the MemoryManager are welcome! Please follow these steps to contribute:
+return 0;
+}
+```
 
-Fork the Repository
-Create a Feature Branch
-Commit Your Changes
-Push to the Branch
-Create a Pull Request
-License
-This project is licensed under the MIT License.
+
+**Implementation Details**
+### Files
+
+- MemoryManager.h: Contains the class declaration and method prototypes.
+- MemoryManager.cpp: Implements the memory management logic.
+
+### Design Considerations
+- Custom Strategies: Implement different allocation strategies as needed.
+- Thread Safety: Ensure the manager is thread-safe if used in multi-threaded environments.
+
+**Extending the Memory Manager**
+To extend or modify the MemoryManager:
+
+- Add Allocation Strategies: Update MemoryManager.cpp with new strategies.
+- Optimize Performance: Profile and improve the memory management logic.
+- Handle Special Cases: Implement additional logic for special scenarios.
+
+**Contribution**
+Contributions are welcome! To contribute:
+
+1. **Fork the Library**
+2. **Create a Feature Branch**
+3. **Commit Your Changes**
+4. **Push to the Branch**
+5. **Create a Pull Request**
+
+### License
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
